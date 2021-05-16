@@ -27,6 +27,8 @@ kotlin {
                 api(compose.runtime)
                 api(compose.foundation)
                 api(compose.material)
+
+                implementation("org.jsoup:jsoup:1.13.1")
             }
         }
         val commonTest by getting
@@ -53,4 +55,7 @@ android {
         minSdkVersion(24)
         targetSdkVersion(29)
     }
+}
+dependencies {
+    implementation("androidx.compose:compose-runtime:0.1.0-dev10")
 }
