@@ -3,6 +3,7 @@ package com.topha.common
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
+import com.skydoves.landscapist.glide.GlideImage
 
 actual fun getPlatformName(): String {
     return "Android"
@@ -15,8 +16,8 @@ actual fun RemoteImage(
     modifier: Modifier,
     contentScale: ContentScale
 ) {
-    CoilImage(
-        data = url,
+    GlideImage(
+        imageModel = url,
         modifier = modifier,
         contentDescription = contentDescription,
         contentScale = ContentScale.Crop,

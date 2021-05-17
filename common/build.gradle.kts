@@ -4,7 +4,6 @@ plugins {
     kotlin("multiplatform")
     id("org.jetbrains.compose") version "0.3.1"
     id("com.android.library")
-    id("kotlin-android-extensions")
 }
 
 group = "com.topha"
@@ -12,6 +11,7 @@ version = "1.0"
 
 repositories {
     google()
+    mavenCentral()
 }
 
 kotlin {
@@ -36,6 +36,8 @@ kotlin {
             dependencies {
                 api("androidx.appcompat:appcompat:1.2.0")
                 api("androidx.core:core-ktx:1.3.1")
+
+                implementation("com.github.skydoves:landscapist-glide:1.2.1")
             }
         }
         val androidTest by getting {
@@ -57,5 +59,5 @@ android {
     }
 }
 dependencies {
-    implementation("androidx.compose:compose-runtime:0.1.0-dev10")
+    implementation("androidx.compose:compose-runtime:0.1.0-dev14")
 }
